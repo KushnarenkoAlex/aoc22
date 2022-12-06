@@ -2,9 +2,14 @@ apply plugin: 'idea'
 apply plugin: 'java'
 
 dependencies {
-    implementation 'commons-io:commons-io:2.11.0'
+    implementation 'com.google.guava:guava:11.0.2'
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.9.0'
 }
 
 repositories {
     mavenCentral()
+}
+
+test {
+    useJUnitPlatform()
 }
