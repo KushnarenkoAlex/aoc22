@@ -8,27 +8,20 @@ import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
 
 public class Day1 {
-    public String[] input;
 
-    public Day1() {
-        try {
-            URL url = Resources.getResource("Day1Input.txt");
-            this.input = Resources.toString(url, StandardCharsets.UTF_8).split("\n\n");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
+    public static void main(String[] args) throws IOException {
+        URL url = Resources.getResource("Day1Input.txt");
+        String[] input = Resources.toString(url, StandardCharsets.UTF_8).split("\n\n");
 
-    public int part1() {
-        return Arrays.stream(input).map(s ->
+        int result1 = Arrays.stream(input).map(s ->
                         Arrays.stream(s.split("\n"))
                                 .mapToInt(Integer::parseInt)
                                 .sum())
                 .max(Integer::compare).orElse(0);
-    }
 
-    public int part2() {
-        return Arrays.stream(input).map(s ->
+        System.out.println(result1);
+
+        int result2 = Arrays.stream(input).map(s ->
                         Arrays.stream(s.split("\n"))
                                 .mapToInt(Integer::parseInt)
                                 .sum())
@@ -36,5 +29,7 @@ public class Day1 {
                 .limit(3)
                 .mapToInt(Integer::intValue)
                 .sum();
+
+        System.out.println(result2);
     }
 }
