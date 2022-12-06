@@ -27,4 +27,15 @@ public class Day1 {
                                 .sum())
                 .max(Integer::compare).orElse(0);
     }
+
+    public int part2() {
+        return Arrays.stream(input).map(s ->
+                        Arrays.stream(s.split("\n"))
+                                .mapToInt(Integer::parseInt)
+                                .sum())
+                .sorted((o1, o2) -> o2 - o1)
+                .limit(3)
+                .mapToInt(Integer::intValue)
+                .sum();
+    }
 }

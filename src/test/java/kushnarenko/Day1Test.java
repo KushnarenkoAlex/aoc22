@@ -10,6 +10,6 @@ public class Day1Test {
 
     @Test
     void testDay1Part2() {
-        System.out.println(new Day1().part1());
+        System.out.println(new Day1().part2());
     }
 }
