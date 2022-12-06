@@ -2,17 +2,17 @@ package kushnarenko;
 
 import org.junit.jupiter.api.Test;
 
-public class Day1Test {
+public class Day2Test {
 
-    Day1 day = new Day1();
+    Day2 day = new Day2();
 
     @Test
-    void testDay1Part1() {
+    void testDay2Part1() {
         System.out.println(day.part1());
     }
 
     @Test
-    void testDay1Part2() {
+    void testDay2Part2() {
         System.out.println(day.part2());
     }
 }

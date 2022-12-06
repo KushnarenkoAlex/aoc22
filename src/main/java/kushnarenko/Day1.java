@@ -6,7 +6,6 @@ import java.io.IOException;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
-import java.util.List;
 
 public class Day1 {
     public String[] input;
