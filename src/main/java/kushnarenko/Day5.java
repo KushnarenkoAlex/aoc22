@@ -5,10 +5,7 @@ import com.google.common.io.Resources;
 import java.io.IOException;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Stack;
+import java.util.*;
 
 public class Day5 {
 
@@ -57,13 +54,7 @@ public class Day5 {
             }
         }
 
-
-        for (Stack<Character> crate : crates) {
-            if (crate != null) {
-                result.append(crate.pop());
-            }
-        }
-
+        Arrays.stream(crates).filter(Objects::nonNull).map(Stack::pop).forEach(result::append);
         System.out.println(result);
     }
 }
