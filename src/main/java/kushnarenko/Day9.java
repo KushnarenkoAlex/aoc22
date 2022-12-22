@@ -16,12 +16,9 @@ public class Day9 {
                 .split("\n");
 
         Set<String> tailCoordinatesSet = new LinkedHashSet<>();
-        int size = 5;
-        int currentHeadX = 0, currentHeadY = size - 1;
-        int currentTailX = 0, currentTailY = size - 1;
+        int currentHeadX = 0, currentHeadY = 0, currentTailX = 0, currentTailY = 0;;
         tailCoordinatesSet.add(String.format("%d %d", currentTailY, currentTailX));
         for (String s : input) {
-            System.out.println(s);
             String[] commands = s.split(" ");
             String direction = commands[0];
             int movesCount = Integer.parseInt(commands[1]);
